@@ -1,0 +1,169 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #1a1a1a;
+    color: #d9d9d9; /* Light gray text */
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+    scroll-behavior: smooth;
+}
+
+/* Headings */
+h1, h2 {
+    color: #ffffff; /* White for headings */
+}
+
+/* Transparent Navigation */
+nav {
+    background-color: rgba(26, 26, 26, 0.8);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 10;
+}
+
+nav.sticky {
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b027bf;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../assets/images/homepage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 0.2em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 0.2em;
+    font-weight: 300;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure all headings are white */
+}
+
+section#music {
+    background-color: #2b2b2b;
+}
+
+section#events {
+    background-color: #1a1a1a;
+}
+
+section#blog {
+    background-color: #2b2b2b;
+}
+
+/* Footer (Contact Section) */
+footer {
+    background-color: #343434;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* Make text visible in the footer */
+}
+
+/* Latest Tracks Styling */
+.track-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.track-card {
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    font-size: 2em;
+    color: #ffffff;
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #b027bf; /* Accent color on hover */
+}
