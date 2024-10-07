@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
     <title>DJ Conduit - PsyTech Music</title>
     <!-- Link to your style sheet -->
     <link rel="stylesheet" href="css/style.css">
@@ -16,20 +14,49 @@
 
     <header>
         <div class="hero">
+
+        <!-- Background Video -->
+        <video id="backgroundVideo" autoplay loop muted playsinline class="background-video">
+            <source src="assets/video/videocontent_02.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <script>
+            document.getElementById("backgroundVideo").playbackRate = 0.5; // Adjust playback rate for slow-motion
+        </script>
+
+
             <h1>DJ Conduit</h1>
             <p>PsyTech Music & Vibes</p>
         </div>
         <nav>
             <ul class="nav-links">
+                <li><a href="#bio">Bio</a></li>
                 <li><a href="#music">Music</a></li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
 
+    <!-- Bio Section -->
+    <section id="bio">
+        <h2>BIO</h2>
+        <p>
+            Hailing proudly from the Mother City of Cape Town and purveyor of infectious dance grooves, Conduit's music selection embraces a solid electronic aggression. This translates into sets where he picks apart & infuses together PsyTech music that tantalizes your senses.
+        </p>
+        <p>
+            His unique fusion of Galactic Progressive, Techno & PsyTrance delivers sophisticated beats with cosmic psy melodies and sneaky drops of driving techno bass lines. 
+        </p>
+        <p>
+            "For me, it's all about the Music. It inspires and provokes us to be who we are to the fullest of our abilities. I imagine that music plays many roles in your life as it does in mine. It’s an element that connects us, allowing others to have a sense of who we are and what we believe. Consider the ways that music has influenced your life. Music has the power to shift our feelings from somber to euphoria in an instant. It can bring us back to memories we forgot we had, or forward to the world we have yet to create. It's an incredible high playing music for a crowd...tapping into that shared energy and emotion...taking them on a Journey! I'm just a Conduit"
+        </p>
+
+        <div class="om-symbol">ॐ</div> <!-- Add the symbol as a separate element -->
+
+    </section>
+    
+    <!-- Music Section -->
     <section id="music">
         <h2>Latest Tracks</h2>
         <p>Here are some of my latest tracks and live sets.</p>
@@ -45,28 +72,112 @@
         </div>
     </section>
     
-
+    <!-- Events Section -->
     <section id="events">
         <h2>Upcoming Events</h2>
-        <p>Stay tuned for my latest gigs and shows.</p>
+        
+        <div class="event-list">
+            <div class="event-card">
+                <!-- Event Image -->
+                <img src="assets/images/event01_a.jpg" alt="Event 1 Image" class="event-image">
+              
+                
+                <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">NOV 2024</span>
+                </div>
+                <div class="event-details">
+                    <h3>Summer Camp Khaya</h3>
+                    <p>Cape Town</p>
+                </div>
+                
+                <a href="#" class="ticket-btn">Private</a>
+            </div>
+
+            <!-- Second Event Card -->
+            <div class="event-card">
+                <!-- Event Image -->
+                <img src="assets/images/event01_a.jpg" alt="Event 1 Image" class="event-image">
+             
+                <div class="event-date">
+                    <span class="day">25</span>
+                    <span class="month">DEC 2024</span>
+                </div>
+                <div class="event-details">
+                    <h3>Festival of Lights</h3>
+                    <p>Johannesburg</p>
+                </div>
+                <a href="#" class="ticket-btn">Public</a>
+            </div>
+
+              <!-- Third Event Card -->
+              <div class="event-card">
+                <!-- Event Image -->
+                <img src="assets/images/event01_a.jpg" alt="Event 1 Image" class="event-image">
+             
+                <div class="event-date">
+                    <span class="day">25</span>
+                    <span class="month">DEC 2024</span>
+                </div>
+                <div class="event-details">
+                    <h3>Festival of Lights</h3>
+                    <p>Johannesburg</p>
+                </div>
+                <a href="#" class="ticket-btn">Public</a>
+            </div>
+
+              <!-- Forth Event Card -->
+              <div class="event-card">
+                <!-- Event Image -->
+                <img src="assets/images/event01_a.jpg" alt="Event 1 Image" class="event-image">
+             
+                <div class="event-date">
+                    <span class="day">25</span>
+                    <span class="month">DEC 2024</span>
+                </div>
+                <div class="event-details">
+                    <h3>Festival of Lights</h3>
+                    <p>Johannesburg</p>
+                </div>
+                <a href="#" class="ticket-btn">Public</a>
+            </div>
+
+            
+        </div>
     </section>
 
-    <section id="blog">
-        <h2>Music Blog</h2>
-        <p>Check out my latest thoughts on PsyTech music.</p>
-    </section>
-
+    <!-- Contact Section -->
     <footer id="contact">
         <h2>Contact Me</h2>
-        <p>For bookings and inquiries, hit me up.</p>
+<p>For bookings and inquiries, hit me up.</p>
+
+<form class="contact-form">
+    <div class="form-group">
+      
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+       
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+     
+        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+</form>
+
+
+
+
         <div class="social-icons">
-            <a href="https://facebook.com/yourprofile" target="blank">
+            <a href="https://facebook.com/yourprofile" target="_blank">
                 <i class="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://instagram.com/yourprofile" target="blank">
+            <a href="https://instagram.com/yourprofile" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://soundcloud.com/yourprofile" target="blank">
+            <a href="https://soundcloud.com/yourprofile" target="_blank">
                 <i class="fa-brands fa-soundcloud"></i>
             </a>
         </div>
@@ -84,7 +195,6 @@
             }
         };
     </script>
-    
 
 </body>
 </html>

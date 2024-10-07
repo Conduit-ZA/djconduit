@@ -15,7 +15,11 @@ body {
 
 /* Headings */
 h1, h2 {
-    color: #ffffff; /* White for headings */
+    background: linear-gradient(90deg, #f9a602, #ff6600); /* Adjust colors if needed */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 /* Transparent Navigation */
@@ -57,26 +61,37 @@ nav.sticky {
 }
 
 .nav-links a:hover {
-    color: #b027bf;
+    color: #ff6600;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('../assets/images/homepage.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #ffffff;
     text-align: center;
-    padding-top: 60px;
-    position: relative;
-    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.7); /* Apply fixed zoom level */
+    z-index: -2; /* Below the overlay */
+
+}
+
+
+/* Dark Overlay */
 .hero::before {
     content: '';
     position: absolute;
@@ -84,9 +99,12 @@ nav.sticky {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity */
+    z-index: -1; /* Above the video, below the text */
 }
+
+
+
 
 .hero h1 {
     font-size: 4em;
@@ -165,5 +183,168 @@ footer {
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #b027bf; /* Accent color on hover */
+    color: #ff6600; /* Accent color on hover */
+}
+
+section#bio h2 {
+    text-align: center; /* Center the heading */
+    font-size: 2.5em; /* Adjust font size if needed */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #ffffff; /* White color */
+}
+
+section#bio {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    color: #ffffff;
+    text-align: left; /* Align left for readability */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6; /* Increase line spacing for readability */
+    
+}
+
+section#bio p {
+    margin-bottom: 20px; /* Adds space between paragraphs */
+}
+
+.om-symbol {
+    font-size: 3em; /* Increase size */
+    text-align: center; /* Center the symbol */
+    margin-top: 20px; /* Add space above the symbol */
+    color: #ffffff; /* White color */
+}
+
+
+
+/* Events Section */
+section#events {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    color: #ffffff;
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px; /* Space between cards */
+}
+
+.event-card {
+    background-color: #2b2b2b;
+    padding: 15px; /* Reduce padding to fit more cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Optional: Reduce image size */
+.event-image {
+    width: 100%;
+    height: 150px; /* Adjust for smaller square */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+.event-date {
+    background: linear-gradient(90deg, #f9a602, #ff6600);
+    color: #ffffff; /* White text for contrast */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.event-date .day {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.event-date .month {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.event-details h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.event-details p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.ticket-btn {
+    background: linear-gradient(90deg, #f9a602, #ff6600);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2fafe7;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.ticket-btn:hover {
+    opacity: 0.8; /* Subtle hover effect */
+}
+
+/* CONTACT FORM SECTION----------------------------------------------------------------- */
+
+footer#contact h2 {
+    margin-bottom: 10px; /* Add space below heading */
+}
+
+footer#contact p {
+    margin-bottom: 20px; /* Adjust as needed for more spacing */
+}
+
+
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999999;
+}
+
+.submit-btn {
+    background: linear-gradient(90deg, #f9a602, #ff6600);
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-top: 15px; /* Add space above the button */
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
 }
