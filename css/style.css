@@ -1,3 +1,8 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -9,8 +14,11 @@
 body {
     background-color: #1a1a1a;
     color: #d9d9d9; /* Light gray text */
-    font-family: 'Montserrat', sans-serif; /* Modern font */
+    font-family: 'Unica One', sans-serif; /* Modern font */
     scroll-behavior: smooth;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
 /* Headings */
@@ -22,6 +30,14 @@ h1, h2 {
     text-fill-color: transparent;
 }
 
+h2 {
+    font-size: 2.5rem; /* Adjust size to match your other headings */
+    font-weight: 700;
+    text-align: center;
+}
+
+/* TOP NAV SECTION----------------------------------------------------------------- */
+
 /* Transparent Navigation */
 nav {
     background-color: rgba(26, 26, 26, 0.8);
@@ -30,7 +46,7 @@ nav {
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
     z-index: 10;
 }
 
@@ -52,17 +68,20 @@ nav.sticky {
 }
 
 .nav-links a {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 1.2rem; /* Adjust this value to make it as big as you like */
+    font-weight: 700;  /* Optionally, make it bold to stand out more */
+    color: #e0e0e0;    /* Ensure it matches your color scheme */
     text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ff6600;
 }
+
+
+/* HERO SECTION----------------------------------------------------------------- */
 
 /* Hero Section */
 .hero {
@@ -87,9 +106,7 @@ nav.sticky {
     object-fit: cover;
     transform: scale(1.7); /* Apply fixed zoom level */
     z-index: -2; /* Below the overlay */
-
 }
-
 
 /* Dark Overlay */
 .hero::before {
@@ -100,14 +117,12 @@ nav.sticky {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
     z-index: -1; /* Above the video, below the text */
 }
 
-
-
-
 .hero h1 {
-    font-size: 4em;
+    font-size: 5em;
     margin-bottom: 0.2em;
 }
 
@@ -116,6 +131,8 @@ nav.sticky {
     margin-top: 0.2em;
     font-weight: 300;
 }
+
+/* SECTIONS----------------------------------------------------------------- */
 
 /* Section Styling */
 section {
@@ -147,44 +164,9 @@ section#blog {
     background-color: #2b2b2b;
 }
 
-/* Footer (Contact Section) */
-footer {
-    background-color: #343434;
-    padding: 20px;
-    text-align: center;
-    color: #ffffff; /* Make text visible in the footer */
-}
 
-/* Latest Tracks Styling */
-.track-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
 
-.track-card {
-    background-color: #2b2b2b;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    margin: 0 15px;
-    font-size: 2em;
-    color: #ffffff;
-    text-decoration: none; /* Remove underline */
-    transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-    color: #ff6600; /* Accent color on hover */
-}
+/* BIO SECTION----------------------------------------------------------------- */
 
 section#bio h2 {
     text-align: center; /* Center the heading */
@@ -200,24 +182,80 @@ section#bio {
     text-align: left; /* Align left for readability */
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6; /* Increase line spacing for readability */
-    
+    line-height: 1.6; /* Increase line spacing for readability */  
 }
 
 section#bio p {
     margin-bottom: 20px; /* Adds space between paragraphs */
 }
 
+#bio p {
+    font-size: 1rem; /* Default font size for mobile */
+}
+
+@media (min-width: 768px) {
+    #bio p {
+        font-size: 1.2rem; /* Larger font size for desktop */
+    }
+}
+
+/* OM SECTION----------------------------------------------------------------- */
+
 .om-symbol {
-    font-size: 3em; /* Increase size */
-    text-align: center; /* Center the symbol */
-    margin-top: 20px; /* Add space above the symbol */
-    color: #ffffff; /* White color */
+    font-size: 5.5rem; /* For a bigger symbol */
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(195, 92, 13, 0.7); /* Adds a glow effect */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+    animation: pulseOm 5s ease-in-out infinite;
+}
+@keyframes pulseOm {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* TRACKS SECTION----------------------------------------------------------------- */
+
+/* Latest Tracks Styling */
+.track-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.track-card {
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
+.track-intro {
+    font-size: 1.2rem; /* Match the desktop size of the bio section */
+    margin-bottom: 30px; /* Adjust this value to increase or decrease the space */
+}
 
-/* Events Section */
+.track-intro {
+    margin-bottom: 20px; /* Smaller spacing for mobile */
+}
+
+@media (min-width: 768px) {
+    .track-intro {
+        margin-bottom: 40px; /* Larger spacing for desktop */
+    }
+}
+
+@media (max-width: 767px) {
+    .track-intro {
+        font-size: 1rem; /* Match mobile size of the bio section */
+    }
+}
+
+
+/* EVENTS SECTION----------------------------------------------------------------- */
+
 section#events {
     background-color: #1a1a1a;
     padding: 60px 20px;
@@ -239,15 +277,18 @@ section#events {
     position: relative;
 }
 
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+}
+
 /* Optional: Reduce image size */
 .event-image {
     width: 100%;
-    height: 150px; /* Adjust for smaller square */
+    height: 350px; /* Adjust for smaller square */
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
-
-
 
 .event-date {
     background: linear-gradient(90deg, #f9a602, #ff6600);
@@ -286,10 +327,13 @@ section#events {
     border-radius: 5px;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .ticket-btn:hover {
     opacity: 0.8; /* Subtle hover effect */
+    box-shadow: none;
+    transform: translateY(2px);
 }
 
 /* CONTACT FORM SECTION----------------------------------------------------------------- */
@@ -302,7 +346,17 @@ footer#contact p {
     margin-bottom: 20px; /* Adjust as needed for more spacing */
 }
 
+.contact-intro {
+    font-size: 1.2rem; /* Match the desktop size of the bio section */
+    margin-bottom: 20px; /* Add spacing as needed below */
+}
 
+/* Optional: Responsive Font Size for Mobile */
+@media (max-width: 767px) {
+    .contact-intro {
+        font-size: 1rem; /* Match mobile size of the bio section */
+    }
+}
 
 .contact-form {
     max-width: 500px;
@@ -334,6 +388,12 @@ input::placeholder, textarea::placeholder {
     color: #999999;
 }
 
+input:focus, textarea:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.7);
+    outline: none;
+}
+
 .submit-btn {
     background: linear-gradient(90deg, #f9a602, #ff6600);
     color: #ffffff;
@@ -342,9 +402,39 @@ input::placeholder, textarea::placeholder {
     border-radius: 5px;
     cursor: pointer;
     transition: opacity 0.3s ease;
-    margin-top: 15px; /* Add space above the button */
+    margin-top: 15px; 
 }
 
 .submit-btn:hover {
     opacity: 0.8;
 }
+
+/* FOOTER SECTION----------------------------------------------------------------- */
+
+/* Footer (Contact Section) */
+footer {
+    background-color: #343434;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* Make text visible in the footer */
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    font-size: 2em;
+    color: #ffffff;
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ff6600; /* Accent color on hover */
+    text-shadow: 0 0 1px #000000;
+}
+
+/* References https://www.djkeelez.com/event-dj */
