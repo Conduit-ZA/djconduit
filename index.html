@@ -14,6 +14,8 @@
     <!-- Link to your style sheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+
 <body>
 
     <header>
@@ -33,14 +35,23 @@
             <h1>DJ Conduit</h1>
             <div class="om-symbol">ॐ</div>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#events">Festivals</a></li>
-                <li><a href="#contact">Connect with me</a></li>
-            </ul>
-        </nav>
+       <!-- Navigation Section -->
+<nav>
+    <div class="nav-container">
+
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#events">Festivals</a></li>
+            <li><a href="#contact">Connect with me</a></li>
+        </ul>
+    </div>
+</nav>
     </header>
 
     <!-- Bio Section -->
@@ -240,6 +251,15 @@
             }
         };
     </script>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+    </script>
+    
+
 
 </body>
 </html>

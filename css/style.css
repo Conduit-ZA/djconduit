@@ -38,16 +38,18 @@ h2 {
 
 /* TOP NAV SECTION----------------------------------------------------------------- */
 
-/* Transparent Navigation */
+/* TOP NAV SECTION----------------------------------------------------------------- */
+
+/* Navigation Styling */
 nav {
     background-color: rgba(26, 26, 26, 0.8);
     position: absolute;
     top: 0;
     width: 100%;
     padding: 20px 0;
-    text-align: center;
     transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
     z-index: 10;
+    text-align: center; /* Center navigation on desktop */
 }
 
 nav.sticky {
@@ -56,21 +58,35 @@ nav.sticky {
     top: 0;
 }
 
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: center; /* Center-align items on desktop */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
+    justify-content: center; /* Centers links in desktop view */
 }
 
 .nav-links li {
-    display: inline-block;
     margin: 0 15px;
 }
 
 .nav-links a {
-    font-size: 1.2rem; /* Adjust this value to make it as big as you like */
-    font-weight: 700;  /* Optionally, make it bold to stand out more */
-    color: #e0e0e0;    /* Ensure it matches your color scheme */
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e0e0e0;
     text-decoration: none;
     padding: 10px 20px;
     transition: color 0.3s ease;
@@ -79,6 +95,54 @@ nav.sticky {
 .nav-links a:hover {
     color: #ff6600;
 }
+
+/* Burger Icon */
+.burger {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    margin-left: auto; /* Ensures it aligns to the right on mobile */
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #e0e0e0;
+    margin: 5px;
+}
+
+/* Responsive Navigation for Mobile */
+@media (max-width: 768px) {
+    .nav-container {
+        justify-content: space-between; /* Logo left, burger right */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(26, 26, 26, 0.9);
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block; /* Show on mobile */
+    }
+
+    /* Show the nav when active */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
 
 
 /* HERO SECTION----------------------------------------------------------------- */
@@ -296,11 +360,8 @@ section#bio p {
   
   
 
-
-
-
-
 /* EVENTS SECTION----------------------------------------------------------------- */
+
 
 /* EVENTS SECTION----------------------------------------------------------------- */
 
