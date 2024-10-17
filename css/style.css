@@ -455,6 +455,7 @@ section#events {
     padding: 60px 20px;
     text-align: center;
     background-color: #1a1a1a;
+    overflow: hidden;
   }
   
   #artwork h2 {
@@ -463,46 +464,55 @@ section#events {
     margin-bottom: 20px;
   }
   
-  
-  /* CSS Grid Layout */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    grid-auto-rows: 150px; /* Default height for rows */
-  }
-  
-  /* Base Styles for Gallery Items */
-  .gallery-item {
+  /* Slider Styling */
+  .slider {
     overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
   }
   
-  .gallery-item img {
+  .slider-track {
+    display: flex;
+    animation: scroll 45s linear infinite; /* Slowed down to 45s for a slower scroll */
+  }
+  
+  /* Slide Styling */
+  .slide {
+    flex: 0 0 200px; /* Fixed width for uniformity */
+    height: 200px; /* Fixed height for uniformity */
+    margin-right: 15px; /* Add spacing between images */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  }
+  
+  .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
   }
   
-  /* Height Variants */
-  .height-small {
-    grid-row: span 1;
+  /* Continuous Loop Animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-2100px); /* Increased total width to account for spacing */
+    }
   }
   
-  .height-medium {
-    grid-row: span 2;
+  /* Hover Effect: Pause and Zoom */
+  .slider-track:hover {
+    animation-play-state: paused; /* Pause animation on hover */
   }
   
-  .height-large {
-    grid-row: span 3;
+  .slide:hover img {
+    transform: scale(1.1); /* Zoom image on hover */
   }
   
-  /* Hover Effect */
-  .gallery-item:hover img {
-    transform: scale(1.1);
-  }
+  
   
   
   
