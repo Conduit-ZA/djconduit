@@ -38,7 +38,6 @@ h2 {
 
 /* TOP NAV SECTION----------------------------------------------------------------- */
 
-/* TOP NAV SECTION----------------------------------------------------------------- */
 
 /* Navigation Styling */
 nav {
@@ -360,8 +359,6 @@ section#bio p {
   
   
 
-/* EVENTS SECTION----------------------------------------------------------------- */
-
 
 /* EVENTS SECTION----------------------------------------------------------------- */
 
@@ -450,7 +447,64 @@ section#events {
     box-shadow: none;
     transform: translateY(2px);
  }
+
+/* ARTWORK SECTION----------------------------------------------------------------- */
  
+/* Artwork Section */
+#artwork {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+  }
+  
+  #artwork h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  /* CSS Grid Layout */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    grid-auto-rows: 150px; /* Default height for rows */
+  }
+  
+  /* Base Styles for Gallery Items */
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Height Variants */
+  .height-small {
+    grid-row: span 1;
+  }
+  
+  .height-medium {
+    grid-row: span 2;
+  }
+  
+  .height-large {
+    grid-row: span 3;
+  }
+  
+  /* Hover Effect */
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  
+  
 
 /* CONTACT FORM SECTION----------------------------------------------------------------- */
 
