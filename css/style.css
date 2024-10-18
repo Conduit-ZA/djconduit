@@ -17,7 +17,7 @@ body {
     font-family: 'Unica One', sans-serif; /* Modern font */
     scroll-behavior: smooth;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-     scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
 
@@ -34,6 +34,11 @@ h2 {
     font-size: 2.5rem; /* Adjust size to match your other headings */
     font-weight: 700;
     text-align: center;
+}
+
+p {
+    font-size: 2.2rem; /* Adjust size as needed */
+    line-height: 1.6;  /* Optional: Adjust line spacing for better readability */
 }
 
 
@@ -246,8 +251,8 @@ section#bio {
     background-color: #1a1a1a;
     padding: 60px 20px;
     color: #ffffff;
-    text-align: left; /* Align left for readability */
-    max-width: 800px;
+    text-align: center; /* Align left for readability */
+    max-width: 900px;
     margin: 0 auto;
     line-height: 1.6; /* Increase line spacing for readability */  
 }
@@ -257,17 +262,27 @@ section#bio p {
 }
 
 #bio p {
-    font-size: 1rem; /* Default font size for mobile */
+    font-size: 1.5rem; /* Default font size for mobile */
 }
 
 @media (min-width: 768px) {
     #bio p {
-        font-size: 1.2rem; /* Larger font size for desktop */
+        font-size: 1.5rem; /* Larger font size for desktop */
     }
 }
 
+.om-symbol2 {
+    display: flex;
+    font-size: 5.5rem; /* Large size for the symbol */
+    color: #ffffff !important; /* Force white color */
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(171, 8, 135, 0.7), 0 0 20px rgba(23, 96, 215, 0.5);
+    justify-content: center; /* Horizontally centers the symbol */
+    align-items: center;     /* Vertically centers the symbol (if needed) */
+}
 
 
+/* HERO SECTION----------------------------------------------------------------- */
 
 /* Flexbox container to align the image and the om symbol on the same line */
 .promo-container {
@@ -342,11 +357,6 @@ section#bio p {
         font-size: 3.5rem; /* Reduce font size for symbol, stay next to image */
     }
 }
-
-
-
-
-
 
 
 
@@ -583,9 +593,6 @@ section#events {
   .slide:hover img {
     transform: scale(1.1); /* Zoom image on hover */
   }
-  
-  
-  
   
   
 
