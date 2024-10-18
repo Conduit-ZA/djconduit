@@ -240,6 +240,28 @@ section#blog {
 
 /* BIO SECTION----------------------------------------------------------------- */
 
+
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* Adjust as needed */
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px; /* Rounded corners, adjust the value for more/less rounding */
+}
+
+/* Add responsiveness if needed for smaller screens */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 200px; /* Smaller width for mobile */
+    }
+}
+
+
+
+
+
+
 section#bio h2 {
     text-align: center; /* Center the heading */
     font-size: 2.5em; /* Adjust font size if needed */
