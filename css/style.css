@@ -266,21 +266,76 @@ section#bio p {
     }
 }
 
-/* OM SECTION----------------------------------------------------------------- */
 
+
+
+/* Flexbox container to align the image and the om symbol on the same line */
+.promo-container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally center the image and symbol */
+    gap: 15px; /* Space between the image and the symbol */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+@keyframes flickerAndPulse {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+        transform: scale(1); /* Initial scale */
+    }
+    20%, 24%, 55% {
+        opacity: 0; /* Flickering effect */
+    }
+    70% {
+        transform: scale(1.1); /* Start pulsing effect after flickering */
+    }
+    100% {
+        transform: scale(1.0); /* Pulse expands to 120% size */
+    }
+}
+
+@keyframes flickerAndPulseSmall {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+        transform: scale(1); /* Initial scale */
+    }
+    20%, 24%, 55% {
+        opacity: 0; /* Flickering effect */
+    }
+    70% {
+        transform: scale(0.5); /* Start pulsing effect after flickering */
+    }
+    
+}
+
+.promo-responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    text-shadow: 0 0 10px rgba(23, 96, 215, 0.7), 0 0 20px rgba(23, 96, 215, 0.5);
+    animation: flickerAndPulse 6s ease-in-out infinite; /* Combined flicker and pulse */
+}
+
+
+
+/* Override gradient styles for the OM symbol */
 .om-symbol {
-    font-size: 5.5rem; /* For a bigger symbol */
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(195, 92, 13, 0.7); /* Adds a glow effect */
-    text-align: center;
-    margin-top: 10px;
-    font-weight: 700;
-    animation: pulseOm 5s ease-in-out infinite;
+    font-size: 5.5rem; /* Large size for the symbol */
+    color: #ffffff !important; /* Force white color */
+    font-weight: 600;
+    background: none; /* Remove any background gradients */
+    -webkit-background-clip: none; /* Remove background-clip effect */
+    -webkit-text-fill-color: #ffffff !important; /* Ensure the text fill is white */
+    text-fill-color: #ffffff !important; /* Apply white color */
+    animation: flickerAndPulseSmall 6s ease-in-out infinite; /* Combined flicker and pulse */
+    display: inline-block;
 }
-@keyframes pulseOm {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
+
+
+
+
+
+
 
 /* TRACKS SECTION----------------------------------------------------------------- */
 
