@@ -290,7 +290,7 @@ section#bio p {
         transform: scale(1.1); /* Start pulsing effect after flickering */
     }
     100% {
-        transform: scale(1.0); /* Pulse expands to 120% size */
+        transform: scale(1); /* Return to initial size */
     }
 }
 
@@ -303,9 +303,8 @@ section#bio p {
         opacity: 0; /* Flickering effect */
     }
     70% {
-        transform: scale(0.5); /* Start pulsing effect after flickering */
+        transform: scale(0.9); /* Shrink effect during the pulse */
     }
-    
 }
 
 .promo-responsive-img {
@@ -315,8 +314,6 @@ section#bio p {
     text-shadow: 0 0 10px rgba(23, 96, 215, 0.7), 0 0 20px rgba(23, 96, 215, 0.5);
     animation: flickerAndPulse 6s ease-in-out infinite; /* Combined flicker and pulse */
 }
-
-
 
 /* Override gradient styles for the OM symbol */
 .om-symbol {
@@ -330,6 +327,22 @@ section#bio p {
     animation: flickerAndPulseSmall 6s ease-in-out infinite; /* Combined flicker and pulse */
     display: inline-block;
 }
+
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+    .promo-container {
+        gap: 10px; /* Keep side-by-side but reduce the gap between the image and symbol */
+    }
+
+    .promo-responsive-img {
+        max-width: 60%; /* Slightly reduce image size on mobile, keep side by side */
+    }
+
+    .om-symbol {
+        font-size: 3.5rem; /* Reduce font size for symbol, stay next to image */
+    }
+}
+
 
 
 
