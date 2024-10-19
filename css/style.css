@@ -295,7 +295,7 @@ section#bio p {
     font-size: 5.5rem; /* Large size for the symbol */
     color: #009FDB !important; /* Force white color */
     font-weight: 600;
-    text-shadow: 0 0 10px rgba(13, 138, 191, 0.7), 0 0 20px rgba(19, 145, 203, 0.5);
+    text-shadow: 0 0 5px rgba(13, 138, 191, 0.7), 0 0 20px rgba(19, 145, 203, 0.2);
     justify-content: center; /* Horizontally centers the symbol */
     align-items: center;     /* Vertically centers the symbol (if needed) */
     
@@ -341,7 +341,7 @@ section#bio p {
     }
     70% {
         transform: scale(0.6); /* Shrink effect during the pulse */
-        text-shadow: 0 0 10px rgba(13, 138, 191, 0.7), 0 0 20px rgba(19, 145, 203, 0.5);
+        text-shadow: 0 0 50px rgba(13, 138, 191, 0.7), 0 0 20px rgba(189, 1, 227, 0.5);
     }
 }
 
