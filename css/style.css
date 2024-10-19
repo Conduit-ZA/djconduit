@@ -23,7 +23,7 @@ body {
 
 /* Headings */
 h1, h2 {
-    background: linear-gradient(90deg, #f9a602, #ff6600); /* Adjust colors if needed */
+    background: linear-gradient(90deg, #4bbde6, #009FDB); /* Adjust colors if needed */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -101,7 +101,7 @@ nav.sticky {
 }
 
 .nav-links a:hover {
-    color: #ff6600;
+    color: #009FDB;
 }
 
 /* Burger Icon */
@@ -178,6 +178,7 @@ nav.sticky {
     object-fit: cover;
     transform: scale(1.7); /* Apply fixed zoom level */
     z-index: -2; /* Below the overlay */
+    filter: grayscale(100%);
 }
 
 /* Dark Overlay */
@@ -188,7 +189,7 @@ nav.sticky {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity */
+    background-color: rgba(0, 0, 0, 0.10); /* Adjust opacity */
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
     z-index: -1; /* Above the video, below the text */
 }
@@ -203,6 +204,9 @@ nav.sticky {
     margin-top: 0.2em;
     font-weight: 300;
 }
+
+
+
 
 /* SECTIONS----------------------------------------------------------------- */
 
@@ -258,10 +262,6 @@ section#blog {
 }
 
 
-
-
-
-
 section#bio h2 {
     text-align: center; /* Center the heading */
     font-size: 2.5em; /* Adjust font size if needed */
@@ -298,7 +298,7 @@ section#bio p {
     font-size: 5.5rem; /* Large size for the symbol */
     color: #ffffff !important; /* Force white color */
     font-weight: 600;
-    text-shadow: 0 0 10px rgba(171, 8, 135, 0.7), 0 0 20px rgba(23, 96, 215, 0.5);
+    text-shadow: 0 0 5px rgba(33, 136, 201, 0.703), 0 0 20px rgba(12, 168, 225, 0.858);
     justify-content: center; /* Horizontally centers the symbol */
     align-items: center;     /* Vertically centers the symbol (if needed) */
 }
@@ -495,7 +495,7 @@ section#events {
  
  .event-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(19, 185, 227, 0.388);
  }
  
  /* Event Image Styling */
@@ -508,7 +508,7 @@ section#events {
  
  /* Event Date Styling */
  .event-date {
-    background: linear-gradient(90deg, #f9a602, #ff6600);
+    background: linear-gradient(90deg, #009FDB, #009FDB);
     color: #ffffff;
     padding: 10px;
     border-radius: 5px;
@@ -535,7 +535,7 @@ section#events {
  }
  
  .ticket-btn {
-    background: linear-gradient(90deg, #f9a602, #ff6600);
+    background: linear-gradient(90deg, #009FDB, #009FDB);
     display: inline-block;
     padding: 10px 20px;
     color: #ffffff;
@@ -671,13 +671,13 @@ input::placeholder, textarea::placeholder {
 }
 
 input:focus, textarea:focus {
-    border-color: #ff6600;
-    box-shadow: 0 0 5px rgba(255, 102, 0, 0.7);
+    border-color: #009FDB;
+    box-shadow: 0 0 5px rgba(34, 189, 255, 0.7);
     outline: none;
 }
 
 .submit-btn {
-    background: linear-gradient(90deg, #f9a602, #ff6600);
+    background: linear-gradient(90deg, #009FDB, #009FDB);
     color: #ffffff;
     padding: 10px;
     border: none;
@@ -715,7 +715,7 @@ footer {
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #ff6600; /* Accent color on hover */
+    color: #009FDB; /* Accent color on hover */
     text-shadow: 0 0 1px #000000;
 }
 
