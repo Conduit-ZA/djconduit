@@ -341,7 +341,7 @@ section#bio p {
     }
     70% {
         transform: scale(0.6); /* Shrink effect during the pulse */
-        text-shadow: 0 0 50px rgba(13, 138, 191, 0.7), 0 0 20px rgba(189, 1, 227, 0.5);
+       
     }
 }
 
@@ -349,7 +349,7 @@ section#bio p {
     max-width: 100%;
     height: auto;
     display: block;
-    animation: flickerAndPulse 6s ease-in-out infinite; /* Combined flicker and pulse */
+    animation: flickerAndPulse 10s ease-in-out infinite; /* Combined flicker and pulse */
 }
 
 /* Override gradient styles for the OM symbol */
@@ -361,7 +361,7 @@ section#bio p {
     -webkit-background-clip: none; /* Remove background-clip effect */
     -webkit-text-fill-color: #009FDB !important; /* Ensure the text fill is white */
     text-fill-color: #009FDB !important; /* Apply white color */
-    animation: flickerAndPulseSmall 6s ease-in-out infinite; /* Combined flicker and pulse */
+    animation: flickerAndPulseSmall 10s ease-in-out infinite; /* Combined flicker and pulse */
     display: inline-block;
  
 }
