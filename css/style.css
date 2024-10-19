@@ -23,7 +23,7 @@ body {
 
 /* Headings */
 h1, h2 {
-    background: linear-gradient(90deg, #009FDB, #009FDB); /* Adjust colors if needed */
+    background: linear-gradient(90deg, #ff6600, #ff6600); /* Adjust colors if needed */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -101,7 +101,7 @@ nav.sticky {
 }
 
 .nav-links a:hover {
-    color: #009FDB;
+    color: #ff6600;
 }
 
 /* Burger Icon */
@@ -293,7 +293,7 @@ section#bio p {
 .om-symbol2 {
     display: flex;
     font-size: 5.5rem; /* Large size for the symbol */
-    color: #009FDB !important; /* Force white color */
+    color: #ff6600 !important; /* Force white color */
     font-weight: 600;
     justify-content: center; /* Horizontally centers the symbol */
     align-items: center;     /* Vertically centers the symbol (if needed) */
@@ -354,12 +354,12 @@ section#bio p {
 /* Override gradient styles for the OM symbol */
 .om-symbol {
     font-size: 5.5rem; /* Large size for the symbol */
-    color: #009FDB !important; /* Force white color */
+    color: #ff6600 !important; /* Force white color */
     font-weight: 600;
     background: none; /* Remove any background gradients */
     -webkit-background-clip: none; /* Remove background-clip effect */
-    -webkit-text-fill-color: #009FDB !important; /* Ensure the text fill is white */
-    text-fill-color: #009FDB !important; /* Apply white color */
+    -webkit-text-fill-color: #ff6600 !important; /* Ensure the text fill is white */
+    text-fill-color: #ff6600 !important; /* Apply white color */
     animation: flickerAndPulseSmall 10s ease-in-out infinite; /* Combined flicker and pulse */
     display: inline-block;
  
@@ -499,7 +499,7 @@ section#events {
  
  .event-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(9, 148, 198, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 154, 2, 0.3);
  }
  
  /* Event Image Styling */
@@ -522,7 +522,7 @@ section#events {
  
  /* Event Date Styling */
  .event-date {
-    background: linear-gradient(90deg, #009FDB, #009FDB);
+    background: linear-gradient(90deg, #ff6600, #ff6600);
     color: #ffffff;
     padding: 10px;
     border-radius: 5px;
@@ -549,7 +549,7 @@ section#events {
  }
  
  .ticket-btn {
-    background: linear-gradient(90deg, #009FDB, #009FDB);
+    background: linear-gradient(90deg, #ff6600, #ff6600);
     display: inline-block;
     padding: 10px 20px;
     color: #ffffff;
@@ -685,13 +685,13 @@ input::placeholder, textarea::placeholder {
 }
 
 input:focus, textarea:focus {
-    border-color: #009FDB;
-    box-shadow: 0 0 5px rgba(8, 130, 196, 0.7);
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(196, 180, 8, 0.7);
     outline: none;
 }
 
 .submit-btn {
-    background: linear-gradient(90deg, #009FDB, #009FDB);
+    background: linear-gradient(90deg, #ff6600, #ff6600);
     color: #ffffff;
     padding: 10px;
     border: none;
@@ -729,7 +729,7 @@ footer {
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #009FDB; /* Accent color on hover */
+    color: #ff6600; /* Accent color on hover */
     text-shadow: 0 0 1px #000000;
 }
 
