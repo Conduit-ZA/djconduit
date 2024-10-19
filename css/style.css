@@ -293,11 +293,12 @@ section#bio p {
 .om-symbol2 {
     display: flex;
     font-size: 5.5rem; /* Large size for the symbol */
-    color: #ffffff !important; /* Force white color */
+    color: #009FDB !important; /* Force white color */
     font-weight: 600;
     text-shadow: 0 0 10px rgba(13, 138, 191, 0.7), 0 0 20px rgba(19, 145, 203, 0.5);
     justify-content: center; /* Horizontally centers the symbol */
     align-items: center;     /* Vertically centers the symbol (if needed) */
+    
 }
 
 
@@ -325,6 +326,7 @@ section#bio p {
     }
     100% {
         transform: scale(1); /* Return to initial size */
+
     }
 }
 
@@ -332,12 +334,14 @@ section#bio p {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
         opacity: 1;
         transform: scale(1); /* Initial scale */
+    
     }
     20%, 24%, 55% {
         opacity: 0; /* Flickering effect */
     }
     70% {
-        transform: scale(0.9); /* Shrink effect during the pulse */
+        transform: scale(0.6); /* Shrink effect during the pulse */
+        text-shadow: 0 0 10px rgba(13, 138, 191, 0.7), 0 0 20px rgba(19, 145, 203, 0.5);
     }
 }
 
@@ -345,21 +349,21 @@ section#bio p {
     max-width: 100%;
     height: auto;
     display: block;
-    text-shadow: 0 0 10px rgba(23, 96, 215, 0.7), 0 0 20px rgba(23, 96, 215, 0.5);
     animation: flickerAndPulse 6s ease-in-out infinite; /* Combined flicker and pulse */
 }
 
 /* Override gradient styles for the OM symbol */
 .om-symbol {
     font-size: 5.5rem; /* Large size for the symbol */
-    color: #ffffff !important; /* Force white color */
+    color: #009FDB !important; /* Force white color */
     font-weight: 600;
     background: none; /* Remove any background gradients */
     -webkit-background-clip: none; /* Remove background-clip effect */
-    -webkit-text-fill-color: #ffffff !important; /* Ensure the text fill is white */
-    text-fill-color: #ffffff !important; /* Apply white color */
+    -webkit-text-fill-color: #009FDB !important; /* Ensure the text fill is white */
+    text-fill-color: #009FDB !important; /* Apply white color */
     animation: flickerAndPulseSmall 6s ease-in-out infinite; /* Combined flicker and pulse */
     display: inline-block;
+ 
 }
 
 /* Media queries for responsive design */
@@ -374,6 +378,8 @@ section#bio p {
 
     .om-symbol {
         font-size: 3.5rem; /* Reduce font size for symbol, stay next to image */
+ 
+        
     }
 }
 
