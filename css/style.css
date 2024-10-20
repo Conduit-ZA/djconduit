@@ -375,6 +375,10 @@ section#bio p {
         max-width: 60%; /* Slightly reduce image size on mobile, keep side by side */
     }
 
+    .torus-image {
+        width: 100px; /* Smaller size for mobile screens */
+    }
+
     .om-symbol {
         font-size: 3.5rem; /* Reduce font size for symbol, stay next to image */
  
@@ -405,6 +409,18 @@ section#bio p {
     to {
         transform: rotate(360deg);
     }
+}
+
+/* Mobile Responsiveness for Torus Image */
+@media (max-width: 600px) {
+    .torus-image {
+        width: 200px; /* Smaller size for mobile screens */
+    }
+
+    .promo-container {
+        gap: 10px; /* Reduce gap between elements for smaller screens */
+    }
+
 }
 
 
