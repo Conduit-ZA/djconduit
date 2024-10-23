@@ -249,6 +249,7 @@ section#blog {
     display: block;
     margin: 20px auto;
     border-radius: 15px; /* Rounded corners, adjust the value for more/less rounding */
+    margin-bottom: 40px;
 }
 
 /* Add responsiveness if needed for smaller screens */
@@ -775,5 +776,43 @@ footer {
     color: #ff6600; /* Accent color on hover */
     text-shadow: 0 0 1px #000000;
 }
+
+#control-bar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    padding: 0.5rem;
+  }
+ 
+  canvas {
+    width: 100%; /* Makes the canvas take full width of its container */
+    height: auto; /* Automatically adjusts the height to maintain aspect ratio */
+    max-width: 400px; /* Limits the maximum size */
+    max-height: 400px; /* Limits the maximum height */
+    position: relative;
+    z-index: 9;
+}
+
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    canvas {
+        max-width: 80vw; /* Limits the width to 80% of the viewport width */
+        max-height: 80vw; /* Matches the width, keeping it responsive */
+    }
+}
+
+/* Media Query for very small screens like smartphones */
+@media (max-width: 480px) {
+    canvas {
+        max-width: 100vw; /* Makes the canvas full width on small screens */
+        max-height: 100vw; /* Ensures the canvas height is proportional to the width */
+    }
+}
+
 
 /* References https://www.djkeelez.com/event-dj */
