@@ -390,15 +390,17 @@ section#bio p {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center everything horizontally */
-    gap: 5px; /* Space between the torus image and the promo container */
+    gap: 15px; /* Space between the torus image and the promo container */
 }
 
 .torus-image {
-    max-width: 150px; /* Adjust the size as needed */
+    max-width: 250px; /* Adjust the size as needed */
     height: auto;
     display: block;
     margin: 0 auto 10px; /* Center the image and add some margin below */
     animation: spin 120s linear infinite; /* Optional: adding a spin animation */
+    margin-top: 50px; /* Space below the heading */
+ 
 }
 
 /* Spin animation for the torus image (optional) */
