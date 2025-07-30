@@ -24,7 +24,7 @@
 <body>
 
     <header>
-        <div class="hero">
+        <div id="particles-js" class="hero">
 
         <!-- Background Video -->
         <video id="backgroundVideo" autoplay loop muted playsinline class="background-video">
@@ -286,7 +286,7 @@
         <h2>Connect with me</h2>
         <!-- <p class="contact-intro">For bookings and inquiries, hit me up.</p> -->
 
-<!-- <form class="contact-form">
+<form class="contact-form" action="assets/send_email.php" method="post">
     <div class="form-group">
       
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -300,7 +300,7 @@
         <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
     </div>
     <button type="submit" class="submit-btn">Submit</button>
-</form> -->
+</form>
 
 
 
@@ -318,6 +318,8 @@
         </div>
     </footer>
 
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
     <script src="js/main.js"></script>
 
     <script>
